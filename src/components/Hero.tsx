@@ -32,7 +32,7 @@ const HeroSection = () => {
         <p className="md:text-center md:font-semibold">Selamat Datang Di</p>
         <div className="text-4xl font-bold md:flex md:gap-2 md:text-5xl">
           <h1>RSUD</h1>
-          <h1>SAM RATULANGI</h1>
+          <h1>DR. SAM RATULANGI</h1>
           <h1>TONDANO</h1>
         </div>
       </div>
