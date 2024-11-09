@@ -17,7 +17,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "RSUD Sam Ratulangi",
-  description: "RSUD Sam Ratulangi",
+  description: "RSUD Sam Ratulangi Company Profile",
 };
 
 export default function RootLayout({
