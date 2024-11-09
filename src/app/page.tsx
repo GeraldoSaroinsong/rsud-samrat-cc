@@ -29,7 +29,7 @@ export default async function Home() {
       <section className="bg-slate-100 py-[15vh]">
         <div className="m-auto flex w-[90%] flex-col gap-24 md:w-[50%] md:flex-row md:items-center">
           <div className="flex flex-col items-center gap-2">
-            <img
+            <Image
               src="https://www.rsudsamrat.site/epasien/images/author-image.jpg"
               alt="direktur"
               className="h-[150px] w-[150px] rounded-full shadow-md"
