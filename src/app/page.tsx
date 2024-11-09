@@ -1,101 +1,124 @@
+import HeroSection from "@/components/Hero";
 import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+import contentfulClient from "@/lib/contentfulClient";
+import {
+  TypeTipeLayananSkeleton,
+  TypeTipeLayananAsset,
+} from "@/types/service.type";
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+// retrieve portfolio items
+export const getServices = async () => {
+  try {
+    const layanan = await contentfulClient.getEntries<TypeTipeLayananSkeleton>({
+      content_type: "tipeLayanan",
+    });
+    return layanan;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export default async function Home() {
+  const layanan = await getServices();
+  return (
+    <div>
+      {/* Hero Section */}
+      <HeroSection />
+      {/* About Section */}
+      <section className="bg-slate-100 py-[15vh]">
+        <div className="m-auto flex w-[90%] flex-col gap-24 md:w-[50%] md:flex-row md:items-center">
+          <div className="flex flex-col items-center gap-2">
+            <img
+              src="https://www.rsudsamrat.site/epasien/images/author-image.jpg"
+              alt="direktur"
+              className="h-[150px] w-[150px] rounded-full shadow-md"
             />
-            Deploy now
-          </a>
+            <div className="text-center text-gray-600">
+              <h1 className="font-semibold md:text-xl">
+                Dr. Nancy Mongdong, MHSM, SpPD, FINASIM
+              </h1>
+              <p className="text-xs md:text-sm">Direktur Utama</p>
+            </div>
+          </div>
+          <div className="m-auto flex flex-col items-center gap-2 text-center md:w-[50%] md:items-start md:text-left">
+            <h1 className="text-3xl font-semibold text-lime-500 transition duration-150 hover:-translate-y-2 md:text-4xl">
+              Sedikit Tentang Kami
+            </h1>
+            <p className="pt-3 text-sm">
+              RSUD SAM RATULANGI TONDANO merupakan salah satu rumah sakit umum
+              di wilayah TONDANO yang berkedudukan di JL. SUPRAPTO LUAAN TONDANO
+              TIMUR. RSUD SAM RATULANGI TONDANO mendapat izin operasional dengan
+              Kode PPK 7102014 sejak bulan November 2009 dan diresmikan tanggal
+              21 februari 2010.
+            </p>
+            <a
+              href="#"
+              className="mt-3 rounded-md border-2 border-lime-500 px-4 py-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
+            >
+              Lanjut Baca
+            </a>
+          </div>
+        </div>
+      </section>
+      {/* Services Section */}
+      <section className="py-[15vh]">
+        <div className="m-auto w-[90%] md:flex md:w-[50%] md:flex-col md:items-center">
+          <h1 className="text-4xl font-semibold text-lime-500">Layanan</h1>
+          <div className="flex flex-col flex-wrap gap-10 pb-10 pt-6 md:flex-row md:items-end md:justify-between">
+            {layanan &&
+              layanan.items?.map((serviceItem: any, index: number) => {
+                return (
+                  <div className="flex flex-col items-center">
+                    <div
+                      key={index}
+                      className="flex flex-col flex-wrap text-center"
+                    >
+                      <Image
+                        src={`https:${
+                          (serviceItem.fields.image as TypeTipeLayananAsset)
+                            ?.fields.file.url
+                        }`}
+                        alt="service item"
+                        className="w-[70vw] md:w-[30vh]"
+                        width={300}
+                        height={300}
+                      />
+                      <p className="font-sans text-base font-semibold text-lime-500 md:text-lg">
+                        {serviceItem.fields.title}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+          </div>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#"
+            className="mt-3 rounded-md border-2 border-lime-500 px-4 py-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
           >
-            Read our docs
+            Lanjut Baca
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+      {/* Map Section */}
+      <section className="bg-slate-100 py-[15vh]">
+        <div className="m-auto mb-5 flex w-[90%] flex-row justify-end md:w-[50%]">
+          <h1 className="w-fit text-3xl font-semibold text-lime-500 transition duration-150 hover:-translate-y-2 md:text-4xl">
+            <a
+              target="_blank"
+              href="https://www.google.com/maps/place/RSUD+DR+SAM+RATULANGI+TONDANO/@1.3094742,124.9139868,17z/data=!3m1!4b1!4m6!3m5!1s0x32871525dad70799:0xe2b43fc8c1826f2a!8m2!3d1.3094688!4d124.9165617!16s%2Fg%2F11r_k76p92?entry=ttu&g_ep=EgoyMDI0MTEwNi4wIKXMDSoASAFQAw%3D%3D"
+            >
+              Lokasi Kami
+            </a>
+          </h1>
+        </div>
+        <iframe
+          height="400"
+          loading="lazy"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=rsud%20sam%20ratulangi&zoom=16&maptype=roadmap"
+          className="w-full shadow-md"
+        ></iframe>
+      </section>
     </div>
   );
 }
