@@ -1,10 +1,7 @@
-import Image from "next/image";
 import * as React from "react";
 import Marquee from "react-fast-marquee";
 
-interface IHeroSectionProps {}
-
-const HeroSection: React.FunctionComponent<IHeroSectionProps> = (props) => {
+const HeroSection = () => {
   return (
     <section className="flex flex-col justify-center gap-6 pb-32 pt-44 md:items-center md:pb-40 md:pt-60">
       <Marquee className="flex gap-6">

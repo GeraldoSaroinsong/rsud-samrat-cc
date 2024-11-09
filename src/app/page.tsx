@@ -8,7 +8,7 @@ import {
 } from "@/types/service.type";
 
 // retrieve portfolio items
-export const getServices = async () => {
+const getServices = async () => {
   try {
     const layanan = await contentfulClient.getEntries<TypeTipeLayananSkeleton>({
       content_type: "tipeLayanan",
@@ -69,11 +69,8 @@ export default async function Home() {
             {layanan &&
               layanan.items?.map((serviceItem: any, index: number) => {
                 return (
-                  <div className="flex flex-col items-center">
-                    <div
-                      key={index}
-                      className="flex flex-col flex-wrap text-center"
-                    >
+                  <div className="flex flex-col items-center" key={index}>
+                    <div className="flex flex-col flex-wrap text-center">
                       <Image
                         src={`https:${
                           (serviceItem.fields.image as TypeTipeLayananAsset)

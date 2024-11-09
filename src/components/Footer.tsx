@@ -1,9 +1,7 @@
 import * as React from "react";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 
-interface IFooterSectionProps {}
-
-const FooterSection: React.FunctionComponent<IFooterSectionProps> = (props) => {
+const FooterSection = () => {
   return (
     <section className="bg-lime-500 py-[5vh] text-white">
       <div className="m-auto flex w-[90%] flex-col items-center gap-6 md:w-[50%] md:items-start">

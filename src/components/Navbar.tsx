@@ -8,9 +8,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { FaCalendar, FaEnvelope, FaPhone } from "react-icons/fa";
 
-interface INavbarProps {}
-
-const Navbar: React.FunctionComponent<INavbarProps> = (props) => {
+const Navbar = () => {
   return (
     <div className="fixed z-10 w-full divide-y-2 bg-slate-100/95 shadow-sm">
       <div className="m-auto flex w-[90%] items-center justify-between py-2 text-lime-500 md:w-[50%] md:py-4">
