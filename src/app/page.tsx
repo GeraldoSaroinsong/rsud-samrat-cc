@@ -1,5 +1,4 @@
 import HeroSection from "@/components/Hero";
-import Image from "next/image";
 
 import contentfulClient from "@/lib/contentfulClient";
 import {
@@ -29,7 +28,7 @@ export default async function Home() {
       <section className="bg-slate-100 py-[15vh]">
         <div className="m-auto flex w-[90%] flex-col gap-24 md:w-[50%] md:flex-row md:items-center">
           <div className="flex flex-col items-center gap-2">
-            <Image
+            <img
               src="https://www.rsudsamrat.site/epasien/images/author-image.jpg"
               alt="direktur"
               className="h-[150px] w-[150px] rounded-full shadow-md"
@@ -71,7 +70,7 @@ export default async function Home() {
                 return (
                   <div className="flex flex-col items-center" key={index}>
                     <div className="flex flex-col flex-wrap text-center">
-                      <Image
+                      <img
                         src={`https:${
                           (serviceItem.fields.image as TypeTipeLayananAsset)
                             ?.fields.file.url
