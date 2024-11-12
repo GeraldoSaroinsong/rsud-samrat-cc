@@ -3,8 +3,8 @@ import HeroSection from "@/components/Hero";
 import contentfulClient from "@/lib/contentfulClient";
 import {
   TypeTipeLayananSkeleton,
-  TypeTipeLayananAsset,
-} from "@/types/service.type";
+  TypeMediaAsset,
+} from "@/types/project-cc.type";
 
 // retrieve portfolio items
 const getServices = async () => {
@@ -62,28 +62,29 @@ export default async function Home() {
       </section>
       {/* Services Section */}
       <section className="py-[15vh]">
-        <div className="m-auto w-[90%] md:flex md:w-[50%] md:flex-col md:items-center">
+        <div className="m-auto flex w-[90%] flex-col items-center justify-center md:w-[50%]">
           <h1 className="text-4xl font-semibold text-lime-500">Layanan</h1>
-          <div className="flex flex-col flex-wrap gap-10 pb-10 pt-6 md:flex-row md:items-end md:justify-between">
+          <div className="flex flex-col flex-wrap gap-10 pb-10 pt-6 md:w-full md:flex-row md:items-end md:justify-between md:gap-0">
             {layanan &&
               layanan.items?.map((serviceItem: any, index: number) => {
                 return (
-                  <div className="flex flex-col items-center" key={index}>
-                    <div className="flex flex-col flex-wrap text-center">
-                      <img
-                        src={`https:${
-                          (serviceItem.fields.image as TypeTipeLayananAsset)
-                            ?.fields.file.url
-                        }`}
-                        alt="service item"
-                        className="w-[70vw] md:w-[30vh]"
-                        width={300}
-                        height={300}
-                      />
-                      <p className="font-sans text-base font-semibold text-lime-500 md:text-lg">
-                        {serviceItem.fields.title}
-                      </p>
-                    </div>
+                  <div
+                    className="flex flex-col flex-wrap items-center text-center"
+                    key={index}
+                  >
+                    <img
+                      src={`https:${
+                        (serviceItem.fields.image as TypeMediaAsset)?.fields
+                          .file.url
+                      }`}
+                      alt="service item"
+                      className="w-[70vw] md:w-[30vh]"
+                      width={300}
+                      height={300}
+                    />
+                    <p className="font-sans text-base font-semibold text-lime-500 md:text-lg">
+                      {serviceItem.fields.title}
+                    </p>
                   </div>
                 );
               })}

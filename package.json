@@ -11,6 +11,7 @@
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^16.0.0",
     "@contentful/rich-text-types": "^17.0.0",
+    "@radix-ui/react-accordion": "^1.2.1",
     "@radix-ui/react-dropdown-menu": "^2.1.2",
     "@vis.gl/react-google-maps": "^1.4.0",
     "class-variance-authority": "^0.7.0",

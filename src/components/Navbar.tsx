@@ -10,7 +10,7 @@ import { FaCalendar, FaEnvelope, FaPhone } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <div className="fixed z-10 w-full divide-y-2 bg-slate-100/95 shadow-sm">
+    <div className="fixed z-10 w-full divide-y-2 bg-slate-100 shadow-sm">
       <div className="m-auto flex w-[90%] items-center justify-between py-2 text-lime-500 md:w-[50%] md:py-4">
         <a href="#" className="text-md flex flex-col md:flex-row md:text-xl">
           <h1 className="rounded-t-md bg-lime-500 px-0.5 text-white md:rounded-l-md md:rounded-se-none">
@@ -21,22 +21,28 @@ const Navbar = () => {
         {/* Desktop Navbar */}
         <div className="hidden gap-2 md:flex">
           <a
-            href="#"
+            href="/tentangKami"
             className="rounded-md px-4 py-1 transition duration-200 hover:bg-lime-500 hover:text-white"
           >
             Tentang Kami
           </a>
           <a
-            href="#"
+            href="/layanan"
             className="rounded-md px-4 py-1 transition duration-200 hover:bg-lime-500 hover:text-white"
           >
             Layanan
           </a>
           <a
-            href="#"
+            href="/tim"
             className="rounded-md px-4 py-1 transition duration-200 hover:bg-lime-500 hover:text-white"
           >
             Tim
+          </a>
+          <a
+            href="/blog"
+            className="rounded-md px-4 py-1 transition duration-200 hover:bg-lime-500 hover:text-white"
+          >
+            Blog
           </a>
         </div>
         {/* Mobile Navbar */}
@@ -46,21 +52,18 @@ const Navbar = () => {
               <GiHamburgerMenu className="text-xl" />
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuItem>
-                <a href="#" className="hover:text-white">
-                  Tentang Kami
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <a href="#" className="hover:text-white">
-                  Layanan
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <a href="#" className="hover:text-white">
-                  Tim
-                </a>
-              </DropdownMenuItem>
+              <a href="/tentangKami" className="hover:text-white">
+                <DropdownMenuItem>Tentang Kami</DropdownMenuItem>
+              </a>
+              <a href="/layanan" className="hover:text-white">
+                <DropdownMenuItem>Layanan</DropdownMenuItem>
+              </a>
+              <a href="/tim" className="hover:text-white">
+                <DropdownMenuItem>Tim</DropdownMenuItem>
+              </a>
+              <a href="/blog" className="hover:text-white">
+                <DropdownMenuItem>Blog</DropdownMenuItem>
+              </a>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
