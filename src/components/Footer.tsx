@@ -1,5 +1,5 @@
 import * as React from "react";
-import { FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaEnvelope, FaFacebook, FaInstagram, FaPhone } from "react-icons/fa";
 
 const FooterSection = () => {
   return (
@@ -14,16 +14,16 @@ const FooterSection = () => {
               Navigasi
             </h1>
             <ul className="flex flex-col">
-              <li>
+              <li className="hover:underline">
                 <a href="/tentangKami">Tentang Kami</a>
               </li>
-              <li>
+              <li className="hover:underline">
                 <a href="/layanan">Layanan</a>
               </li>
-              <li>
+              <li className="hover:underline">
                 <a href="/tim">Tim</a>
               </li>
-              <li>
+              <li className="hover:underline">
                 <a href="/blog">Blog</a>
               </li>
             </ul>
@@ -41,6 +41,31 @@ const FooterSection = () => {
                 <FaEnvelope className="text-white" />
                 <p className="text-white">: samratulangirsud@gmail.com</p>
               </li>
+            </ul>
+          </div>
+          <div className="flex flex-col gap-2 text-center md:text-left">
+            <h1 className="font-semibold underline underline-offset-2">
+              Media Sosial
+            </h1>
+            <ul className="flex flex-col">
+              <a
+                href="https://www.instagram.com/rsud_samrat_tondano/"
+                target="_blank"
+              >
+                <li className="flex flex-row items-center justify-center gap-1 hover:underline md:justify-start">
+                  <FaInstagram className="text-white" />
+                  <p className="text-white">: rsud_samrat_tondano</p>
+                </li>
+              </a>
+              <a
+                href="https://web.facebook.com/Rsudsamrattondano"
+                target="_blank"
+              >
+                <li className="flex items-center justify-center gap-1 hover:underline md:justify-start">
+                  <FaFacebook className="text-white" />
+                  <p className="text-white">: Rsud Samrat Tondano</p>
+                </li>
+              </a>
             </ul>
           </div>
         </div>

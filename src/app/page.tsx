@@ -1,10 +1,10 @@
 import HeroSection from "@/components/Hero";
-
 import contentfulClient from "@/lib/contentfulClient";
 import {
   TypeTipeLayananSkeleton,
   TypeMediaAsset,
 } from "@/types/project-cc.type";
+import Image from "next/image";
 
 // retrieve portfolio items
 const getServices = async () => {
@@ -72,7 +72,7 @@ export default async function Home() {
                     className="flex flex-col flex-wrap items-center text-center"
                     key={index}
                   >
-                    <img
+                    <Image
                       src={`https:${
                         (serviceItem.fields.image as TypeMediaAsset)?.fields
                           .file.url

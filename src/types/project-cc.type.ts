@@ -68,3 +68,17 @@ export type TypePuskesmas<
   Modifiers extends ChainModifiers,
   Locales extends LocaleCode = LocaleCode,
 > = Entry<TypePuskesmasSkeleton, Modifiers, Locales>;
+
+export interface TypeFasilitasFields {
+  title: EntryFieldTypes.Symbol;
+  fasilitasList: EntryFieldTypes.Array<EntryFieldTypes.Symbol>;
+}
+
+export type TypeFasilitasSkeleton = EntrySkeletonType<
+  TypeFasilitasFields,
+  "fasilitas"
+>;
+export type TypeFasilitas<
+  Modifiers extends ChainModifiers,
+  Locales extends LocaleCode = LocaleCode,
+> = Entry<TypeFasilitasSkeleton, Modifiers, Locales>;
