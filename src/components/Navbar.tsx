@@ -12,7 +12,10 @@ const Navbar = () => {
   return (
     <div className="fixed z-10 w-full divide-y-2 bg-slate-100 shadow-sm">
       <div className="m-auto flex w-[90%] items-center justify-between py-2 text-lime-500 md:w-[50%] md:py-4">
-        <a href="#" className="text-md flex flex-col md:flex-row md:text-xl">
+        <a
+          href="https://rsud-samrat-cc.vercel.app/"
+          className="text-md flex flex-col md:flex-row md:text-xl"
+        >
           <h1 className="rounded-t-md bg-lime-500 px-0.5 text-white md:rounded-l-md md:rounded-se-none">
             RSUD
           </h1>
