@@ -1,11 +1,12 @@
-import * as React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerFooter,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+
 import { FaCalendar, FaEnvelope, FaPhone } from "react-icons/fa";
 
 const Navbar = () => {
@@ -50,25 +51,44 @@ const Navbar = () => {
         </div>
         {/* Mobile Navbar */}
         <div className="block md:hidden">
-          <DropdownMenu>
-            <DropdownMenuTrigger>
+          <Drawer>
+            <DrawerTrigger>
               <GiHamburgerMenu className="text-xl" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <a href="/tentangKami" className="hover:text-white">
-                <DropdownMenuItem>Tentang Kami</DropdownMenuItem>
-              </a>
-              <a href="/layanan" className="hover:text-white">
-                <DropdownMenuItem>Layanan</DropdownMenuItem>
-              </a>
-              <a href="/tim" className="hover:text-white">
-                <DropdownMenuItem>Tim</DropdownMenuItem>
-              </a>
-              <a href="/blog" className="hover:text-white">
-                <DropdownMenuItem>Blog</DropdownMenuItem>
-              </a>
-            </DropdownMenuContent>
-          </DropdownMenu>
+            </DrawerTrigger>
+            <DrawerContent>
+              <div className="m-auto flex h-[50vh] w-[90%] flex-col items-start justify-evenly text-3xl">
+                <a
+                  href="/tentangKami"
+                  className="w-full rounded-md px-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
+                >
+                  Tentang Kami
+                </a>
+                <a
+                  href="/layanan"
+                  className="w-full rounded-md px-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
+                >
+                  Layanan
+                </a>
+                <a
+                  href="/tim"
+                  className="w-full rounded-md px-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
+                >
+                  Tim
+                </a>
+                <a
+                  href="/blog"
+                  className="w-full rounded-md px-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
+                >
+                  Blog
+                </a>
+              </div>
+              <DrawerFooter>
+                <DrawerClose className="w-full rounded-md px-2 text-left text-3xl text-red-400 transition duration-150 hover:bg-red-400 hover:text-white">
+                  Tutup
+                </DrawerClose>
+              </DrawerFooter>
+            </DrawerContent>
+          </Drawer>
         </div>
       </div>
       <div className="m-auto hidden items-center justify-center gap-2 divide-x-2 text-xs md:flex md:w-[50%] md:py-2">

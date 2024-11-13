@@ -14,18 +14,45 @@ const FooterSection = () => {
               Navigasi
             </h1>
             <ul className="flex flex-col">
-              <li className="hover:underline">
+              <li className="rounded-md px-2 hover:bg-white hover:text-lime-500 md:-translate-x-2">
                 <a href="/tentangKami">Tentang Kami</a>
               </li>
-              <li className="hover:underline">
+              <li className="rounded-md px-2 hover:bg-white hover:text-lime-500 md:-translate-x-2">
                 <a href="/layanan">Layanan</a>
               </li>
-              <li className="hover:underline">
+              <li className="rounded-md px-2 hover:bg-white hover:text-lime-500 md:-translate-x-2">
                 <a href="/tim">Tim</a>
               </li>
-              <li className="hover:underline">
+              <li className="rounded-md px-2 hover:bg-white hover:text-lime-500 md:-translate-x-2">
                 <a href="/blog">Blog</a>
               </li>
+            </ul>
+          </div>
+          <div className="flex flex-col gap-2 text-center md:text-left">
+            <h1 className="px-2 font-semibold underline underline-offset-2">
+              Ikuti Kami
+            </h1>
+            <ul className="flex flex-col">
+              <a
+                href="https://www.instagram.com/rsud_samrat_tondano/"
+                target="_blank"
+                className="rounded-md px-2 text-white hover:bg-white hover:text-lime-500"
+              >
+                <li className="flex flex-row items-center justify-center gap-1 md:justify-start">
+                  <FaInstagram />
+                  <p>rsud_samrat_tondano</p>
+                </li>
+              </a>
+              <a
+                href="https://web.facebook.com/Rsudsamrattondano"
+                target="_blank"
+                className="rounded-md px-2 text-white hover:bg-white hover:text-lime-500"
+              >
+                <li className="flex items-center justify-center gap-1 md:justify-start">
+                  <FaFacebook />
+                  <p>Rsud Samrat Tondano</p>
+                </li>
+              </a>
             </ul>
           </div>
           <div className="flex flex-col gap-2 text-center md:text-left">
@@ -41,31 +68,6 @@ const FooterSection = () => {
                 <FaEnvelope className="text-white" />
                 <p className="text-white">: samratulangirsud@gmail.com</p>
               </li>
-            </ul>
-          </div>
-          <div className="flex flex-col gap-2 text-center md:text-left">
-            <h1 className="font-semibold underline underline-offset-2">
-              Media Sosial
-            </h1>
-            <ul className="flex flex-col">
-              <a
-                href="https://www.instagram.com/rsud_samrat_tondano/"
-                target="_blank"
-              >
-                <li className="flex flex-row items-center justify-center gap-1 hover:underline md:justify-start">
-                  <FaInstagram className="text-white" />
-                  <p className="text-white">: rsud_samrat_tondano</p>
-                </li>
-              </a>
-              <a
-                href="https://web.facebook.com/Rsudsamrattondano"
-                target="_blank"
-              >
-                <li className="flex items-center justify-center gap-1 hover:underline md:justify-start">
-                  <FaFacebook className="text-white" />
-                  <p className="text-white">: Rsud Samrat Tondano</p>
-                </li>
-              </a>
             </ul>
           </div>
         </div>
