@@ -69,7 +69,7 @@ export default async function Home() {
               layanan.items?.map((serviceItem: any, index: number) => {
                 return (
                   <div
-                    className="flex flex-col flex-wrap items-center text-center"
+                    className="flex flex-col flex-wrap items-center text-center transition duration-150 md:hover:-translate-y-4 md:hover:shadow-lg md:hover:shadow-lime-500"
                     key={index}
                   >
                     <Image

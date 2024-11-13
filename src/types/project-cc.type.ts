@@ -72,6 +72,7 @@ export type TypePuskesmas<
 export interface TypeFasilitasFields {
   title: EntryFieldTypes.Symbol;
   fasilitasList: EntryFieldTypes.Array<EntryFieldTypes.Symbol>;
+  image: EntryFieldTypes.AssetLink;
 }
 
 export type TypeFasilitasSkeleton = EntrySkeletonType<
