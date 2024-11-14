@@ -83,3 +83,17 @@ export type TypeFasilitas<
   Modifiers extends ChainModifiers,
   Locales extends LocaleCode = LocaleCode,
 > = Entry<TypeFasilitasSkeleton, Modifiers, Locales>;
+
+export interface TypeJadwalPraktekDokterFields {
+  title: EntryFieldTypes.Symbol;
+  image: EntryFieldTypes.Array<EntryFieldTypes.AssetLink>;
+}
+
+export type TypeJadwalPraktekDokterSkeleton = EntrySkeletonType<
+  TypeJadwalPraktekDokterFields,
+  "jadwalPraktekDokter"
+>;
+export type TypeJadwalPraktekDokter<
+  Modifiers extends ChainModifiers,
+  Locales extends LocaleCode = LocaleCode,
+> = Entry<TypeJadwalPraktekDokterSkeleton, Modifiers, Locales>;

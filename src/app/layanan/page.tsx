@@ -1,17 +1,7 @@
-import contentfulClient from "@/lib/contentfulClient";
-import { TypeFasilitasSkeleton, TypeMediaAsset } from "@/types/project-cc.type";
+import { TypeMediaAsset } from "@/types/project-cc.type";
 import Image from "next/image";
-
-const getFasilitas = async () => {
-  try {
-    const fasilitas = await contentfulClient.getEntries<TypeFasilitasSkeleton>({
-      content_type: "fasilitas",
-    });
-    return fasilitas;
-  } catch (error) {
-    console.log(error);
-  }
-};
+import { getFasilitas } from "./lib/fetchData";
+import JadwalPraktekDokter from "./component/JadwalPraktekDokter";
 
 const ServicePage = async () => {
   const fasilitas = await getFasilitas();
@@ -104,6 +94,8 @@ const ServicePage = async () => {
           </div>
         </div>
       </div>
+      {/* Jadwal Praktek Dokter */}
+      <JadwalPraktekDokter />
     </section>
   );
 };
