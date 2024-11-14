@@ -9,7 +9,7 @@ const TeamsPage = async () => {
         <div className="flex flex-col gap-2">
           <h1 className="text-4xl font-semibold text-lime-500">Tim</h1>
           <p className="text-sm text-gray-600">
-            Kenali <span className="text-lime-500">tim tenaga kesehatan</span>
+            Kenali <span className="text-lime-500">tim tenaga kesehatan</span>{" "}
             dan jadwal dokter spesialis
           </p>
         </div>
