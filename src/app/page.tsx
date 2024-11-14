@@ -52,7 +52,7 @@ export default async function Home() {
               21 februari 2010.
             </p>
             <a
-              href="#"
+              href="https://rsud-samrat-cc.vercel.app/tentangKami"
               className="mt-3 rounded-md border-2 border-lime-500 px-4 py-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
             >
               Lanjut Baca
@@ -92,7 +92,7 @@ export default async function Home() {
               })}
           </div>
           <a
-            href="#"
+            href="https://rsud-samrat-cc.vercel.app/layanan"
             className="mt-3 rounded-md border-2 border-lime-500 px-4 py-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
           >
             Lanjut Baca
