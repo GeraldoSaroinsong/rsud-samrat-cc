@@ -15,7 +15,7 @@ const StrukturOrganisasi = () => {
           </li>
           <div className="md:flex md:flex-row md:justify-evenly md:text-center">
             <li className="rounded-xl md:w-[40%] md:bg-white md:p-4 md:shadow-md">
-              <ul>
+              <ul className="md:list-inside md:list-disc">
                 <h1 className="font-semibold">
                   Kepala Bagian Administrasi umum
                 </h1>
@@ -25,7 +25,7 @@ const StrukturOrganisasi = () => {
               </ul>
             </li>
             <li className="rounded-xl md:w-[40%] md:bg-white md:p-4 md:shadow-md">
-              <ul>
+              <ul className="md:list-inside md:list-disc">
                 <h1 className="font-semibold">Kepala Bidang Medis</h1>
                 <li>Kepala Seksi Rawat Jalan dan Gawat Darurat</li>
                 <li>
@@ -36,14 +36,14 @@ const StrukturOrganisasi = () => {
           </div>
           <div className="md:flex md:flex-row md:justify-evenly md:text-center">
             <li className="rounded-xl md:w-[40%] md:bg-white md:p-4 md:shadow-md">
-              <ul>
+              <ul className="md:list-inside md:list-disc">
                 <h1 className="font-semibold">Kepala Bidang Keperawatan</h1>
                 <li>Kepala Seksi Mutu dan Asuhan Keperawatan</li>
                 <li>Kepala Seksi Sumber Daya dan Logistik Keperawatan</li>
               </ul>
             </li>
             <li className="rounded-xl md:w-[40%] md:bg-white md:p-4 md:shadow-md">
-              <ul>
+              <ul className="md:list-inside md:list-disc">
                 <h1 className="font-semibold">Kepala Bidang Penunjang Medis</h1>
                 <li>Kepala Seksi Penunjang Medis</li>
                 <li>Kepala Seksi Penunjang Non Medis</li>

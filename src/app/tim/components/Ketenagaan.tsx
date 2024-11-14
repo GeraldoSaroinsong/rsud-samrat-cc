@@ -22,11 +22,11 @@ const Ketenagaan = () => {
         <AccordionTrigger className="font-semibold">
           Lihat Ketenagaan
         </AccordionTrigger>
-        <AccordionContent>
+        <AccordionContent className="bg-slate-100">
           <Table>
             <TableCaption>Total 392 Org</TableCaption>
             <TableHeader>
-              <TableRow>
+              <TableRow className="text-lg">
                 <TableHead className="text-left font-bold text-lime-500">
                   Jenis Tenaga
                 </TableHead>
