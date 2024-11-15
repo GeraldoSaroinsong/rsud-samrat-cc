@@ -23,7 +23,7 @@ const HeroSection = async () => {
   return (
     <div className="flex flex-col justify-center gap-6 pb-32 pt-44 md:items-center md:pb-40 md:pt-60">
       <Marquee className="flex gap-6">
-        <div className="flex gap-6">
+        <div className="flex gap-4 md:gap-6">
           {hero &&
             hero.items[0]?.fields.image.map((heroItem: any, idx: number) => {
               return (
@@ -31,7 +31,7 @@ const HeroSection = async () => {
                   key={idx}
                   src={`https:${(heroItem as TypeMediaAsset)?.fields.file.url}`}
                   alt="hero"
-                  className="h-[200px] shadow-md md:h-[300px]"
+                  className="w-[300px] shadow-md md:h-[300px] md:w-full"
                   width={500}
                   height={500}
                 />
