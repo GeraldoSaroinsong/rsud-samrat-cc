@@ -35,7 +35,7 @@ const JadwalPraktekDokter = async () => {
         <Carousel className="m-auto w-[80%] md:w-[90%]">
           <CarouselContent className="px-1">
             {team &&
-              team.items[0]?.fields.image.map((teamItem: any, idx: number) => {
+              team.items[1]?.fields.image.map((teamItem: any, idx: number) => {
                 return (
                   <CarouselItem key={idx} className="basis-full md:basis-1/3">
                     <div className="overflow-hidden rounded-xl border-4 border-lime-500 shadow-md">
