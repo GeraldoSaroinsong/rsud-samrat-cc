@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/Footer";
-import { Red_Hat_Display } from "next/font/google";
+import { Outfit } from "next/font/google";
 
-const redHatDisplay = Red_Hat_Display({
+const redHatDisplay = Outfit({
   subsets: ["latin"],
   weight: ["300", "500", "700"],
 });
