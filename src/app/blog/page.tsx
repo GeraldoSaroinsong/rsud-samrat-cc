@@ -1,6 +1,7 @@
 import contentfulClient from "@/lib/contentfulClient";
 import { TypeBlogPostSkeleton, TypeMediaAsset } from "@/types/project-cc.type";
 import Image from "next/image";
+import Link from "next/link";
 
 const getBlogs = async () => {
   try {
@@ -16,7 +17,7 @@ const getBlogs = async () => {
 const BlogPage = async () => {
   const blog = await getBlogs();
   return (
-    <section className="py-[15vh]">
+    <div className="py-[15vh]">
       <div className="m-auto flex w-[90%] flex-col gap-5 md:w-[50%]">
         <div className="flex flex-col gap-2">
           <h1 className="text-4xl font-semibold text-lime-500">Blog</h1>
@@ -39,6 +40,8 @@ const BlogPage = async () => {
                     src={`https:${(blogItem.fields.image as TypeMediaAsset)?.fields.file.url}`}
                     className="md:w-1/3"
                     alt="blog"
+                    width={500}
+                    height={500}
                   />
                   <div className="flex w-full flex-col gap-2 p-4">
                     <h1 className="text-lg font-bold text-lime-500">
@@ -47,19 +50,19 @@ const BlogPage = async () => {
                     <p className="pb-4 text-justify text-xs font-extralight tracking-wide">
                       {blogItem.fields.preview}
                     </p>
-                    <a
+                    <Link
                       href={`../detail/${blogItem.fields.slug}`}
                       className="w-full rounded-md border-2 border-lime-500 bg-transparent p-2 text-center text-lg font-semibold tracking-wide text-lime-500 transition duration-200 hover:bg-lime-500 hover:text-white"
                     >
                       Lanjut Baca
-                    </a>
+                    </Link>
                   </div>
                 </div>
               );
             })}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

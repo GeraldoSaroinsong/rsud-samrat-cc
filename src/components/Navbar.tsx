@@ -8,12 +8,13 @@ import {
 } from "@/components/ui/drawer";
 
 import { FaCalendar, FaEnvelope, FaPhone } from "react-icons/fa";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
     <div className="fixed z-10 w-full divide-y-2 bg-slate-100 shadow-sm">
       <div className="m-auto flex w-[90%] items-center justify-between py-2 text-lime-500 md:w-[50%] md:py-4">
-        <a
+        <Link
           href="https://rsud-samrat-cc.vercel.app/"
           className="text-md flex flex-col md:flex-row md:text-xl"
         >
@@ -21,33 +22,33 @@ const Navbar = () => {
             RSUD
           </h1>
           <h1>Sam Ratulangi</h1>
-        </a>
+        </Link>
         {/* Desktop Navbar */}
         <div className="hidden gap-2 md:flex">
-          <a
+          <Link
             href="/tentangKami"
             className="rounded-md px-4 py-1 transition duration-200 hover:bg-lime-500 hover:text-white"
           >
             Tentang Kami
-          </a>
-          <a
+          </Link>
+          <Link
             href="/layanan"
             className="rounded-md px-4 py-1 transition duration-200 hover:bg-lime-500 hover:text-white"
           >
             Layanan
-          </a>
-          <a
+          </Link>
+          <Link
             href="/tim"
             className="rounded-md px-4 py-1 transition duration-200 hover:bg-lime-500 hover:text-white"
           >
             Tim
-          </a>
-          <a
+          </Link>
+          <Link
             href="/blog"
             className="rounded-md px-4 py-1 transition duration-200 hover:bg-lime-500 hover:text-white"
           >
             Blog
-          </a>
+          </Link>
         </div>
         {/* Mobile Navbar */}
         <div className="block md:hidden">
@@ -57,30 +58,30 @@ const Navbar = () => {
             </DrawerTrigger>
             <DrawerContent>
               <div className="m-auto flex h-[50vh] w-[90%] flex-col items-start justify-evenly text-3xl">
-                <a
+                <Link
                   href="/tentangKami"
                   className="w-full rounded-md px-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
                 >
                   Tentang Kami
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/layanan"
                   className="w-full rounded-md px-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
                 >
                   Layanan
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/tim"
                   className="w-full rounded-md px-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
                 >
                   Tim
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/blog"
                   className="w-full rounded-md px-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
                 >
                   Blog
-                </a>
+                </Link>
               </div>
               <DrawerFooter>
                 <DrawerClose className="w-full rounded-md px-2 text-left text-3xl text-red-400 transition duration-150 hover:bg-red-400 hover:text-white">

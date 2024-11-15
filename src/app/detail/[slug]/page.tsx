@@ -35,6 +35,8 @@ const DetailPage: React.FC<IDetailPageProps> = async ({
           src={`https:${(blog?.fields.image as TypeMediaAsset)?.fields.file.url}`}
           className="rounded-xl shadow-md md:float-right md:mb-4 md:ml-4 md:w-[50%]"
           alt="slug"
+          width={500}
+          height={500}
         />
         <div className="text-justify">
           <RichText document={blog?.fields.body} />
