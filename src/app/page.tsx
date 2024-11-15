@@ -31,7 +31,7 @@ export default async function Home() {
             <Image
               src="https://www.rsudsamrat.site/epasien/images/author-image.jpg"
               alt="direktur"
-              className="h-[150px] w-[150px] rounded-full shadow-md"
+              className="h-[200px] w-[174px] rounded-full shadow-md"
               width={300}
               height={300}
             />
@@ -109,6 +109,7 @@ export default async function Home() {
           </h1>
         </div>
         <iframe
+          aria-label="rsud"
           height="400"
           loading="lazy"
           src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=rsud%20sam%20ratulangi&zoom=16&maptype=roadmap"
