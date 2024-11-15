@@ -3,7 +3,7 @@ import { FaEnvelope, FaFacebook, FaInstagram, FaPhone } from "react-icons/fa";
 
 const FooterSection = () => {
   return (
-    <section className="w-full bg-lime-500 py-[5vh] text-white">
+    <div className="w-full bg-lime-500 py-[5vh] text-white">
       <div className="m-auto flex w-[90%] flex-col items-center gap-6 md:w-[50%] md:items-start">
         <h1 className="rounded-md bg-white px-1 text-xl font-bold text-lime-500 md:w-fit">
           RSUD DR. Sam Ratulangi Tondano
@@ -72,7 +72,7 @@ const FooterSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

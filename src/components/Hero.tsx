@@ -2,7 +2,7 @@ import Marquee from "react-fast-marquee";
 
 const HeroSection = () => {
   return (
-    <section className="flex flex-col justify-center gap-6 pb-32 pt-44 md:items-center md:pb-40 md:pt-60">
+    <div className="flex flex-col justify-center gap-6 pb-32 pt-44 md:items-center md:pb-40 md:pt-60">
       <Marquee className="flex gap-6">
         <div className="flex gap-6">
           <img
@@ -35,7 +35,7 @@ const HeroSection = () => {
           <h1>TONDANO</h1>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

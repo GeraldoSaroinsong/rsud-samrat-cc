@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/Footer";
 import { Outfit } from "next/font/google";
 
-const redHatDisplay = Outfit({
+const font = Outfit({
   subsets: ["latin"],
   weight: ["300", "500", "700"],
 });
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={redHatDisplay.className}>
+      <body className={font.className}>
         <Navbar />
         {children}
       </body>

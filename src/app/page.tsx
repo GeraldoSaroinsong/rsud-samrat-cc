@@ -25,7 +25,7 @@ export default async function Home() {
       {/* Hero Section */}
       <HeroSection />
       {/* About Section */}
-      <section className="bg-slate-100 py-[15vh]">
+      <div className="bg-slate-100 py-[15vh]">
         <div className="m-auto flex w-[90%] flex-col gap-24 md:w-[50%] md:flex-row md:items-center">
           <div className="flex flex-col items-center gap-2">
             <img
@@ -59,9 +59,9 @@ export default async function Home() {
             </a>
           </div>
         </div>
-      </section>
+      </div>
       {/* Services Section */}
-      <section className="py-[15vh]">
+      <div className="py-[15vh]">
         <div className="m-auto flex w-[90%] flex-col items-center justify-center md:w-[50%]">
           <h1 className="place-self-start text-left text-4xl font-semibold text-lime-500">
             Layanan
@@ -98,9 +98,9 @@ export default async function Home() {
             Lanjut Baca
           </a>
         </div>
-      </section>
+      </div>
       {/* Map Section */}
-      <section className="bg-slate-100 py-[15vh]">
+      <div className="bg-slate-100 py-[15vh]">
         <div className="m-auto mb-5 flex w-[90%] flex-row justify-end md:w-[50%]">
           <h1 className="w-fit text-3xl font-semibold text-lime-500 md:text-4xl">
             Lokasi Kami
@@ -112,7 +112,7 @@ export default async function Home() {
           src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=rsud%20sam%20ratulangi&zoom=16&maptype=roadmap"
           className="w-full shadow-md"
         ></iframe>
-      </section>
+      </div>
     </div>
   );
 }
