@@ -2,6 +2,7 @@ import * as React from "react";
 import RichText from "@/components/richText";
 import contentfulClient from "@/lib/contentfulClient";
 import { TypeBlogPostSkeleton, TypeMediaAsset } from "@/types/project-cc.type";
+import Image from "next/image";
 
 interface IDetailPageProps {
   params: Promise<{ slug: string }>;
@@ -30,9 +31,10 @@ const DetailPage: React.FC<IDetailPageProps> = async ({
         {blog?.fields.title}
       </h1>
       <div className="flex flex-col gap-4 md:block">
-        <img
+        <Image
           src={`https:${(blog?.fields.image as TypeMediaAsset)?.fields.file.url}`}
           className="rounded-xl shadow-md md:float-right md:mb-4 md:ml-4 md:w-[50%]"
+          alt="slug"
         />
         <div className="text-justify">
           <RichText document={blog?.fields.body} />

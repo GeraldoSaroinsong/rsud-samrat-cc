@@ -1,5 +1,6 @@
 import contentfulClient from "@/lib/contentfulClient";
 import { TypeBlogPostSkeleton, TypeMediaAsset } from "@/types/project-cc.type";
+import Image from "next/image";
 
 const getBlogs = async () => {
   try {
@@ -34,9 +35,10 @@ const BlogPage = async () => {
                   key={idx}
                   className="flex flex-col overflow-hidden rounded-xl bg-slate-100 shadow-md md:flex-row md:items-center"
                 >
-                  <img
+                  <Image
                     src={`https:${(blogItem.fields.image as TypeMediaAsset)?.fields.file.url}`}
                     className="md:w-1/3"
+                    alt="blog"
                   />
                   <div className="flex w-full flex-col gap-2 p-4">
                     <h1 className="text-lg font-bold text-lime-500">
