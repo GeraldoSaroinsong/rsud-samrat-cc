@@ -58,12 +58,14 @@ const Navbar = () => {
             </DrawerTrigger>
             <DrawerContent>
               <div className="m-auto flex h-[50vh] w-[90%] flex-col items-start justify-evenly text-3xl">
-                <Link
-                  href="/tentangKami"
-                  className="w-full rounded-md px-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
-                >
-                  Tentang Kami
-                </Link>
+                <DrawerClose className="w-full rounded-md px-2 text-left text-3xl text-red-400 transition duration-150 hover:bg-red-400 hover:text-white">
+                  <Link
+                    href="/tentangKami"
+                    className="w-full rounded-md px-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
+                  >
+                    Tentang Kami
+                  </Link>
+                </DrawerClose>
                 <Link
                   href="/layanan"
                   className="w-full rounded-md px-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
