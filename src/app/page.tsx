@@ -38,7 +38,7 @@ export default async function Home() {
             />
             <div className="text-center text-gray-600">
               <h1 className="font-semibold md:text-xl">
-                Dr. Nancy Mongdong, MHSM, SpPD, FINASIM test update
+                Dr. Nancy Mongdong, MHSM, SpPD, FINASIM
               </h1>
               <p className="text-xs md:text-sm">Direktur Utama</p>
             </div>
