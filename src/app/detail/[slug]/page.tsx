@@ -33,7 +33,7 @@ const DetailPage: React.FC<IDetailPageProps> = async ({
       <div className="flex flex-col gap-4 md:block">
         <Image
           src={`https:${(blog?.fields.image as TypeMediaAsset)?.fields.file.url}`}
-          className="rounded-xl shadow-md md:float-right md:mb-4 md:ml-4 md:w-[50%]"
+          className="rounded-xl shadow-lg md:float-right md:mb-4 md:ml-4 md:w-[50%]"
           alt="slug"
           width={500}
           height={500}
