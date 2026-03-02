@@ -58,7 +58,7 @@ const Navbar = () => {
             </DrawerTrigger>
             <DrawerContent>
               <div className="m-auto flex h-[50vh] w-[90%] flex-col items-start justify-evenly text-3xl">
-                <DrawerClose className="w-full rounded-md px-2 text-left text-3xl text-red-400 transition duration-150 hover:bg-red-400 hover:text-white">
+                <DrawerClose asChild>
                   <Link
                     href="/tentangKami"
                     className="w-full rounded-md px-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
@@ -66,24 +66,30 @@ const Navbar = () => {
                     Tentang Kami
                   </Link>
                 </DrawerClose>
-                <Link
-                  href="/layanan"
-                  className="w-full rounded-md px-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
-                >
-                  Layanan
-                </Link>
-                <Link
-                  href="/tim"
-                  className="w-full rounded-md px-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
-                >
-                  Tim
-                </Link>
-                <Link
-                  href="/blog"
-                  className="w-full rounded-md px-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
-                >
-                  Blog
-                </Link>
+                <DrawerClose asChild>
+                  <Link
+                    href="/layanan"
+                    className="w-full rounded-md px-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
+                  >
+                    Layanan
+                  </Link>
+                </DrawerClose>
+                <DrawerClose asChild>
+                  <Link
+                    href="/tim"
+                    className="w-full rounded-md px-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
+                  >
+                    Tim
+                  </Link>
+                </DrawerClose>
+                <DrawerClose asChild>
+                  <Link
+                    href="/blog"
+                    className="w-full rounded-md px-2 text-lime-500 transition duration-150 hover:bg-lime-500 hover:text-white"
+                  >
+                    Blog
+                  </Link>
+                </DrawerClose>
               </div>
               <DrawerFooter>
                 <DrawerClose className="w-full rounded-md px-2 text-left text-3xl text-red-400 transition duration-150 hover:bg-red-400 hover:text-white">
